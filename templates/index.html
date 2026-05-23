@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Ecommerce Analyzer</title>
+
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+Sistema de Análisis y Optimización de Productos para Ecommerce
+</h1>
+
+<form id="productForm">
+
+<input
+type="text"
+id="name"
+placeholder="Nombre del producto"
+required>
+
+<input
+type="number"
+id="cost"
+placeholder="Costo"
+required>
+
+<input
+type="number"
+id="price"
+placeholder="Precio"
+required>
+
+<select id="competition">
+
+<option value="low">
+Baja competencia
+</option>
+
+<option value="medium">
+Competencia media
+</option>
+
+<option value="high">
+Alta competencia
+</option>
+
+</select>
+
+<select id="demand">
+
+<option value="high">
+Alta demanda
+</option>
+
+<option value="medium">
+Demanda media
+</option>
+
+<option value="low">
+Baja demanda
+</option>
+
+</select>
+
+<input
+type="number"
+id="shipping"
+placeholder="Días envío"
+required>
+
+<button>
+
+Analizar Producto
+
+</button>
+
+</form>
+
+<div id="result">
+
+<h2>Resultado del análisis</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Margen</h3>
+
+<p id="margin"></p>
+
+</div>
+
+<div class="card">
+
+<h3>Score</h3>
+
+<p id="score"></p>
+
+</div>
+
+<div class="card">
+
+<h3>Riesgo</h3>
+
+<p id="risk"></p>
+
+</div>
+
+</div>
+
+<div id="recommendation">
+
+</div>
+
+</div>
+
+</div>
+
+<script
+src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+
+</html>
